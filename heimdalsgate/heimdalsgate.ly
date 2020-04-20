@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title = "Heimdalsgate"
+  title = "Heimdalsgate Like A Promethean Curse"
 }
 
 intro = <<
