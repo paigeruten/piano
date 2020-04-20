@@ -6,7 +6,7 @@
 }
 
 intro = <<
-  \context Staff = upper \relative c'' {
+  \context Staff = up \relative c'' {
     \key c \major
     <<
       \relative c'' {
@@ -33,7 +33,7 @@ intro = <<
     >>
     \bar "||"
   }
-  \context Staff = lower \relative c' {
+  \context Staff = down \relative c' {
     \key c \major
     <a cs fs a>2-> r |
     <a cs fs a>-> r |
@@ -61,7 +61,7 @@ intro = <<
 >>
 
 instrumentalChorus = <<
-  \context Staff = upper \relative c' {
+  \context Staff = up \relative c' {
     \key e \major
     <e gs>4\f e <e b'> e | <b ds> e b ds |
     <e gs>4 e <e b'> e | <b ds> e b as |
@@ -69,7 +69,7 @@ instrumentalChorus = <<
     a! <a cs> <cs e> cs | <b gs'> <b fs'> <b e> <b fs'> |
     \bar "||"
   }
-  \context Staff = lower \fixed c {
+  \context Staff = down \fixed c {
     \key e \major
     <e, e>4 <e gs> <e, e>4 <e gs> |
     <b,, b,> <b, ds> <b,, b,> <b, ds> |
@@ -83,31 +83,48 @@ instrumentalChorus = <<
 >>
 
 verse = <<
-  \context Staff = upper {
+  \context Staff = up {
     <<
       \relative c' {
-        r4 fs8 fs fs4 e |
-        ds ds8 ds4 e8 fs4 |
-        r e8 e e4 b |
-        b b e8 fs e4 |
-        r cs8 cs cs4. cs8 |
+        r4 <cs fs>8 <cs fs> <cs fs>4 e |
+        <b ds> <b ds>8 <b ds>4 e8 fs4 |
+        r <b, e>8 <b e> <b e>4 b |
+        <<
+          { b4 b e8 fs e4 }
+          \new Voice { \voiceTwo b4 b c2 }
+        >> |
+        r4 cs8 cs cs4. cs8 |
         ds4 ds8 e4 fs8 e4 |
         r cs8 cs cs4. cs8 |
         gs'4 fs8 e4 fs8 e4 |
       }
       \addlyrics {
-        Ni -- na Twin is trying to help and I
-        rea -- lly hope that she suc -- ce -- e -- ds,
-        though I picked the thor -- ny path my -- self,
-        I'm a -- fraid, a -- fraid of where it leads
+        Ni -- na Twin is
+        trying to help and I
+        rea -- lly hope that
+        she suc -- ce -- e -- ds,
+        though I picked the
+        thor -- ny path my -- self,
+        I'm a -- fraid, a --
+        fraid of where it leads
       }
     >>
     \bar "||"
   }
+  \context Staff = down \fixed c {
+    <fs, fs>4 <fs a> <fs, fs> <fs a> |
+    <b,, b,> <b, ds> <ds fs> <ds fs a> |
+    <e, e> <e gs> <e, e> <e gs> |
+    <e, e> <c, c> <a,, a,> <f,, f,> |
+    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <b,, b,> <b, ds> |
+    <fs,, fs,> <fs, a,> <a, cs> <cs fs> |
+    <b,, b,> <b, ds> <ds fs> <b,, b,> |
+  }
 >>
 
 preChorus = <<
-  \context Staff = upper {
+  \context Staff = up {
     <<
       \relative c' {
         r4 e8 e e4 b |
@@ -128,16 +145,26 @@ preChorus = <<
     >>
     \bar "||"
   }
+  \context Staff = down \fixed c {
+    <e, e>4 <e gs> <e, e> <e gs> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
+    <e, e>4 <e gs> <e, e> <e gs> |
+    <b,, b,> <b, ds> <b, ds fs> <bf, d f> |
+    <a, cs e> <a,, a,> <a, cs> <a,, a,> |
+    <fs,, fs,> <fs, a,> <fs, a, cs> <cs, cs> |
+    <c, c> <c e> <c, c> <c e> |
+    <f,, f,>2 <g,, g,> |
+  }
 >>
 
 \score {
   \new PianoStaff {
-    \new Staff = upper {
+    \new Staff = up {
       \clef treble
       \time 4/4
       \tempo 4 = 140
     }
-    \new Staff = lower {
+    \new Staff = down {
       \clef bass
     }
 
