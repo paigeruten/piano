@@ -19,7 +19,7 @@ intro = <<
         c f f8 g4 f8 |
         g f c4 r8 c c4 |
         d8 e d2. |
-        R1 |
+        R1*3 |
       }
       \addlyrics {
         I'm in a cris -- is,
@@ -35,10 +35,10 @@ intro = <<
   }
   \context Staff = lower \relative c' {
     \key c \major
-    <a cs fs a>2 r |
-    <a cs fs a> r |
-    <a cs fs a> r |
-    <a cs fs a> r |
+    <a cs fs a>2-> r |
+    <a cs fs a>-> r |
+    <a cs fs a>-> r |
+    <a cs fs a>-> r |
     <a cs fs>1 |
     <gs b e gs>2 <gs b d gs> |
     <e a cs e> <e g c e> |
@@ -46,14 +46,24 @@ intro = <<
     <af c f af> <g' c e g> |
     <c, f a c>~ <c f a c> |
     <d f bf d>1 |
-    <ds! fs! b ds!>1\fermata |
+    <ds! fs! b ds!>1 |
+    <<
+      \relative c { r4 <fs b ds> r4 <fs b ds> }
+      \\
+      \relative c, { <b b'>2 <b b'> }
+    >> |
+    <<
+      \relative c { r8 <fs b ds> r <fs b ds> r\< <fs b ds> r <fs b ds>\! }
+      \\
+      \relative c, { <b b'>4 <b b'> <b b'>8 <b b'> <cs cs'> <ds ds'> }
+    >> |
   }
 >>
 
 instrumentalChorus = <<
   \context Staff = upper \relative c' {
     \key e \major
-    <e gs>4 e <e b'> e | <b ds> e b ds |
+    <e gs>4\f e <e b'> e | <b ds> e b ds |
     <e gs>4 e <e b'> e | <b ds> e b as |
     a! <a cs> <cs e> cs | <b ds> <b e> <b fs'> as |
     a! <a cs> <cs e> cs | <b gs'> <b fs'> <b e> <b fs'> |
