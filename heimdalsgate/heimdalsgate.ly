@@ -14,11 +14,24 @@ intro = <<
         r2 r8 a8 a a |
         a4 cs2. |
         r8 b b4 d4 d16 e8. |
-        d4 cs e8 e4 e8 |
-        e d c4 r8 c c4 |
-        c f f8 g4 f8 |
-        g f c4 r8 c c4 |
-        d8 e d2. |
+        <<
+          {
+            \voiceOne
+            d4 cs e8 e4 e8 |
+            e8 d c4 r8 c c4 |
+            c4 f f8 g4 f8 |
+            g8 f c4 r8 c c4 |
+            d8 e d2. |
+          }
+          \new Voice {
+            \voiceTwo
+            a2 g |
+            a1 |
+            af2 c |
+            a1 |
+            bf1 |
+          }
+        >>
         R1*3 |
       }
       \addlyrics {
@@ -35,11 +48,11 @@ intro = <<
   }
   \context Staff = down \relative c' {
     \key c \major
-    <a cs fs a>2-> r |
-    <a cs fs a>-> r |
-    <a cs fs a>-> r |
-    <a cs fs a>-> r |
-    <a cs fs>1 |
+    <a cs fs a>1-> |
+    <a cs fs a>-> |
+    <a cs fs a>-> |
+    <a cs fs a>-> |
+    <a cs fs> |
     <gs b e gs>2 <gs b d gs> |
     <e a cs e> <e g c e> |
     <a, c f a>~ <a c f a> |
@@ -50,7 +63,7 @@ intro = <<
     <<
       \relative c { r4 <fs b ds> r4 <fs b ds> }
       \\
-      \relative c, { <b b'>2 <b b'> }
+      \relative c, { <b b'>4. <b b'>8 <b b'>4. <b b'>8 }
     >> |
     <<
       \relative c { r8 <fs b ds> r <fs b ds> r\< <fs b ds> r <fs b ds>\! }
@@ -64,21 +77,21 @@ instrumentalChorus = <<
   \context Staff = up \relative c' {
     \key e \major
     <e gs>4\f e <e b'> e | <b ds> e b ds |
-    <e gs>4 e <e b'> e | <b ds> e b as |
-    a! <a cs> <cs e> cs | <b ds> <b e> <b fs'> as |
-    a! <a cs> <cs e> cs | <b gs'> <b fs'> <b e> <b fs'> |
+    <e gs>4 e <e b'> e | <b ds> e b bf |
+    a <a cs> <cs e> <a cs> | <b ds> <b e> <b fs'> bf |
+    a <a cs> <cs e> <a cs> | <b gs'> <b fs'> <b e> <b fs'> |
     \bar "||"
   }
   \context Staff = down \fixed c {
     \key e \major
-    <e, e>4 <e gs> <e, e>4 <e gs> |
-    <b,, b,> <b, ds> <b,, b,> <b, ds> |
-    <e, e>4 <e gs> <e, e>4 <e gs> |
-    <b,, b,> <b, ds> <b,, b,> <as,, as,> |
-    <a,,! a,!> <a, cs> <a,, a,> <a, cs> |
-    <b,, b,> <b, ds> <b,, b,> <as,, as,> |
-    <a,,! a,!> <a, cs> <a,, a,> <a, cs> |
-    <b,, b,> <b, ds> <b,, b,> <b, ds> |
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <b, ds fs>4 <bf, d f> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
   }
 >>
 
@@ -86,17 +99,14 @@ verse = <<
   \context Staff = up {
     <<
       \relative c' {
-        r4 <cs fs>8 <cs fs> <cs fs>4 e |
-        <b ds> <b ds>8 <b ds>4 e8 fs4 |
-        r <b, e>8 <b e> <b e>4 b |
-        <<
-          { b4 b e8 fs e4 }
-          \new Voice { \voiceTwo b4 b c2 }
-        >> |
-        r4 cs8 cs cs4. cs8 |
-        ds4 ds8 e4 fs8 e4 |
-        r cs8 cs cs4. cs8 |
-        gs'4 fs8 e4 fs8 e4 |
+        r4 <cs fs>8 <cs fs> <cs fs>4 <cs e> |
+        <b ds> <b ds>8 <b ds>4 e8 <b fs'>4 |
+        r <b e>8 <b e> <b e>4 b |
+        b4 b e8 fs e4 |
+        r4 <a, cs>8 <a cs> <a cs>4. <a cs>8 |
+        <b ds>4 <b ds>8 <b e>4 <b fs'>8 <b e>4 |
+        r <a cs>8 <a cs> <a cs>4. <a cs>8 |
+        <b gs'>4 <b fs'>8 <b e>4 <b fs'>8 <b e>4 |
       }
       \addlyrics {
         Ni -- na Twin is
@@ -112,14 +122,14 @@ verse = <<
     \bar "||"
   }
   \context Staff = down \fixed c {
-    <fs, fs>4 <fs a> <fs, fs> <fs a> |
-    <b,, b,> <b, ds> <ds fs> <ds fs a> |
+    <fs,, fs,>4 <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <ds fs> <fs a> |
     <e, e> <e gs> <e, e> <e gs> |
     <e, e> <c, c> <a,, a,> <f,, f,> |
     <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
-    <b,, b,> <b, ds> <b,, b,> <b, ds> |
-    <fs,, fs,> <fs, a,> <a, cs> <cs fs> |
-    <b,, b,> <b, ds> <ds fs> <b,, b,> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
+    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
   }
 >>
 
@@ -127,17 +137,17 @@ preChorus = <<
   \context Staff = up {
     <<
       \relative c' {
-        r4 e8 e e4 b |
-        fs'8 fs gs4 fs2 |
-        r4 e8 e e4 b |
+        r4 <b e>8 <b e> <b e>4 b |
+        <b fs'>8 <b fs'> <b gs'>4 <b fs'>2 |
+        r4 <b e>8 <b e> <b e>4 b |
         b' gs8 e4 fs8 gs4 |
-        r8 cs,8 cs ds e4 ds8 cs |
-        ds e ds cs a2 |
-        r4 g'8 g g e c4 |
-        c8 c c4 d8 e d4 |
+        r8 <a, cs>8 <a cs> ds <a e'>4 ds8 cs |
+        <a ds> e' ds cs a2 |
+        r4 <c e g>8 g' <c, e g> e c4 |
+        <f, a c>8 c' <f, a c>4 <g b d>8 e' <g, b d>4 |
       }
       \addlyrics {
-        chem -- i -- cals don't stran -- gle my pen
+        Chem -- i -- cals don't stran -- gle my pen
         chem -- i -- cals don't make me sick a -- gain
         I'm al -- ways so du -- bi -- ous of your in -- tent
         like I can't a -- fford to re -- place what you've spent
@@ -150,10 +160,10 @@ preChorus = <<
     <b,, b,> <b, ds> <ds fs> <b, ds> |
     <e, e>4 <e gs> <e, e> <e gs> |
     <b,, b,> <b, ds> <b, ds fs> <bf, d f> |
-    <a, cs e> <a,, a,> <a, cs> <a,, a,> |
-    <fs,, fs,> <fs, a,> <fs, a, cs> <cs, cs> |
-    <c, c> <c e> <c, c> <c e> |
-    <f,, f,>2 <g,, g,> |
+    <a,, a,> <a, cs> <cs e> <a, cs> |
+    <fs,, fs,> <fs, a,> <a, cs> <a, cs fs> |
+    <c, c> <c e> <e g> <c e> |
+    <f,, f,>4. <f,, f,>8 <g,, g,>4 <g,, g,> |
   }
 >>
 
