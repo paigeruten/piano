@@ -126,7 +126,7 @@ verse = <<
     <b,, b,> <b, ds> <ds fs> <fs a> |
     <e, e> <e gs> <e, e> <e gs> |
     <e, e> <c, c> <a,, a,> <f,, f,> |
-    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <fs,,! fs,!> <fs, a,> <a, cs> <fs, a,> |
     <b,, b,> <b, ds> <ds fs> <b, ds> |
     <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
     <b,, b,> <b, ds> <ds fs> <b, ds> |
@@ -235,7 +235,7 @@ verseTwo = <<
     <b,, b,> <b, ds> <ds fs> <fs a> |
     <e, e> <e gs> <e, e> <e gs> |
     <e, e> <c, c> <a,, a,> <f,, f,> |
-    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <fs,,! fs,!> <fs, a,> <a, cs> <fs, a,> |
     <b,, b,> <b, ds> <ds fs> <b, ds> |
     <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
     <b,, b,> <b, ds> <ds fs> <b, ds> |
