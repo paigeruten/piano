@@ -167,6 +167,216 @@ preChorus = <<
   }
 >>
 
+chorus = <<
+  \context Staff = up <<
+      <<
+        \relative c'' {
+          \voiceOne
+          r1 | r2 r8 gs gs4 |
+          gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
+          cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
+          cs8 e cs e cs e cs-> b~ | b1 |
+        }
+        \addlyrics {
+          Come on chem -- i -- ca -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- a -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- als
+        }
+      >>
+      \new Voice \relative c' {
+        \voiceTwo
+        <e gs>4 e <e b'> e | <b ds> e b ds |
+        <e gs>4 e <e b'> e | <b ds> e b bf |
+        a2. s4 | ds8 b e b fs'4 bf, |
+        a2. s4 | gs'8 b, fs' b, e4 fs |
+        \bar "||"
+      }
+  >>
+  \context Staff = down \fixed c {
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+  }
+>>
+
+verseTwo = <<
+  \context Staff = up {
+    <<
+      \relative c' {
+        r4 <cs fs>8 <cs fs> <cs fs>4 <cs e> |
+        <b ds> <b ds>8 <b ds>4 e8 <b fs'>4 |
+        r <b e>8 <b e> <b e>4 b |
+        b4 b e8 fs e4 |
+        r4 <a, cs>8 <a cs> <a cs>4 <a cs> |
+        <b ds>4 <b ds>8 <b e>4 <b fs'>8 <b e>4 |
+        r <a cs>8 <a cs> <a cs>4 <a cs> |
+        <b gs'>4 <b fs'>8 <b e>4 <b fs'>8 <b e>4 |
+      }
+      \addlyrics {
+        Ni -- na Twin is
+        trying to help and I
+        rea -- lly hope she
+        gets me stra -- i -- ght,
+        'cause my own in --
+        ner cos -- mo -- lo -- gy
+        has be -- come too
+        dense to nav -- i -- gate
+      }
+    >>
+    \bar "||"
+  }
+  \context Staff = down \fixed c {
+    <fs,, fs,>4 <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <ds fs> <fs a> |
+    <e, e> <e gs> <e, e> <e gs> |
+    <e, e> <c, c> <a,, a,> <f,, f,> |
+    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
+    <fs,, fs,> <fs, a,> <a, cs> <fs, a,> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
+  }
+>>
+
+preIntroRepeat = <<
+  \set PianoStaff.connectArpeggios = ##t
+  \context Staff = up \relative c' {
+    <gs b e gs>1\arpeggio | <gs b e gs>\arpeggio |
+    <fs b ds fs>\arpeggio | <fs b d fs>\arpeggio |
+    <<
+      <<
+        {
+          a'2\arpeggio gs | fs e |
+          cs e | fs2\arpeggio r8 a a a |
+        }
+        \addlyrics {
+          ah ah ah ah ah ah ah
+          I'm in a
+        }
+      >>
+      \new Voice {
+        \voiceTwo
+        <a, cs f>1\arpeggio | <a cs> |
+        a | <a cs>\arpeggio |
+      }
+    >>
+    \bar "||"
+  }
+  \context Staff = down \fixed c {
+    <e, e>1\arpeggio | <e, e>\arpeggio |
+    <b,, b,>\arpeggio | <b,, b,>\arpeggio |
+    <fs,, fs,>2.\arpeggio <fs,, fs,>4 |
+    <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
+    <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
+    <fs,, fs,>1\arpeggio |
+  }
+>>
+
+introRepeat = <<
+  \context Staff = up \relative c'' {
+    \key c \major
+    <<
+      \relative c'' {
+        a4 cs2. |
+        r8 b b4 d4 d16 e8. |
+        <<
+          {
+            \voiceOne
+            d4 cs e8 e4 e8 |
+            e8 d c4 r8 c c4 |
+            c4 f f8 g4 f8 |
+            g8 f c4 r8 c c4 |
+            d8 e d2.~ |
+            d2 r8 c8 c4 |
+            d8 e d2.~ |
+            d1 |
+          }
+          \new Voice {
+            \voiceTwo
+            a2 g |
+            a1 |
+            af2 c |
+            a1 |
+            bf1~ |
+            bf2 r2 |
+            bf1~ |
+            bf1 |
+          }
+        >>
+        R1 |
+      }
+      \addlyrics {
+        cris -- is,
+        I need help,
+        come on mood shift
+        shift back to good a -- gain
+        come on mood shift
+        shift back to good a -- gain
+        come on be a friend
+        come on be a friend
+      }
+    >>
+    \bar "||"
+  }
+  \context Staff = down \relative c' {
+    \key c \major
+    <a cs fs>1 |
+    <gs b e gs>2 <gs b d gs> |
+    <e a cs e> <e g c e> |
+    <a, c f a>~ <a c f a> |
+    <af c f af> <g' c e g> |
+    <c, f a c>~ <c f a c> |
+    <d f bf d>1 |
+    <d f bf d> |
+    <d f bf d> |
+    <d f bf d> |
+    <<
+      { <ds! fs! b ds!> }
+      \new Voice \fixed c { r4 <b,, b,> <b,, b,> <b,, b,> }
+    >> |
+  }
+>>
+
+preChorusTwo = <<
+  \context Staff = up {
+    \key e \major
+    <<
+      \relative c' {
+        r4 <b e>8 <b e> <b e>4 b |
+        <b fs'>8 <b fs'> <b gs'>4 <b fs'>2 |
+        r4 <b e>8 <b e> <b e>4 b |
+        b' gs8 e4 fs8 gs4 |
+        r4 <a, cs>8 ds <a e'>4 ds |
+        <a ds>8 e' ds cs a2 |
+        r4 <c e g>8 g' <c, e g> e c c |
+        <f, a c>8 c' <f, a c> c' <g b d>8 e' <g, b d>4 |
+      }
+      \addlyrics {
+        Chem -- i -- cals don't flat -- ten my mind
+        chem -- i -- cals don't mess me up this time
+        Know you bait me way more than you should
+        And it's just like you to hurt me when I'm feel -- ing good
+      }
+    >>
+    \bar "||"
+  }
+  \context Staff = down \fixed c {
+    \key e \major
+    <e, e>4 <e gs> <e, e> <e gs> |
+    <b,, b,> <b, ds> <ds fs> <b, ds> |
+    <e, e>4 <e gs> <e, e> <e gs> |
+    <b,, b,> <b, ds> <b, ds fs> <bf, d f> |
+    <a,, a,> <a, cs> <cs e> <a, cs> |
+    <fs,, fs,> <fs, a,> <a, cs> <a, cs fs> |
+    <c, c> <c e> <e g> <c e> |
+    <f,, f,>4. <f,, f,>8 <g,, g,>4 <g,, g,> |
+  }
+>>
+
 \score {
   \new PianoStaff {
     \new Staff = up {
@@ -182,6 +392,11 @@ preChorus = <<
     \instrumentalChorus
     \verse
     \preChorus
+    \chorus
+    \verseTwo
+    \preIntroRepeat
+    \introRepeat
+    \preChorusTwo
   }
   \layout { }
   \midi { }
