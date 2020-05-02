@@ -4,6 +4,7 @@
 \header {
   title = "Heimdalsgate Like A Promethean Curse"
   composer = "of Montreal / Kevin Barnes"
+  arranger = "Arranged by paileyq"
 }
 
 intro = <<
@@ -49,10 +50,10 @@ intro = <<
   }
   \context Staff = down \relative c' {
     \key c \major
-    <a cs fs a>1-> |
-    <a cs fs a>-> |
-    <a cs fs a>-> |
-    <a cs fs a>-> |
+    <a cs fs a>1 |
+    <a cs fs a> |
+    <a cs fs a> |
+    <a cs fs a> |
     <a cs fs> |
     <gs b e gs>2 <gs b d gs> |
     <e a cs e> <e g c e> |
@@ -100,7 +101,7 @@ verse = <<
   \context Staff = up {
     <<
       \relative c' {
-        r4 <cs fs>8 <cs fs> <cs fs>4 <cs e> |
+        r4\mf <cs fs>8 <cs fs> <cs fs>4 <cs e> |
         <b ds> <b ds>8 <b ds>4 e8 <b fs'>4 |
         r <b e>8 <b e> <b e>4 b |
         b4 b e8 fs e4 |
@@ -173,10 +174,10 @@ chorus = <<
       <<
         \relative c'' {
           \voiceOne
-          r1 | r2 r8 gs gs4 |
+          r1\f | r2 r8 gs gs4 |
           gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-          cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
-          cs8 e cs e cs e cs-> b~ | b1 |
+          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b1 |
         }
         \addlyrics {
           Come on chem -- i -- ca -- a -- als
@@ -209,7 +210,7 @@ verseTwo = <<
   \context Staff = up {
     <<
       \relative c' {
-        r4 <cs fs>8 <cs fs> <cs fs>4 <cs e> |
+        r4\mf <cs fs>8 <cs fs> <cs fs>4 <cs e> |
         <b ds> <b ds>8 <b ds>4 e8 <b fs'>4 |
         r <b e>8 <b e> <b e>4 b |
         b4 b e8 fs e4 |
@@ -268,9 +269,9 @@ preIntroRepeat = <<
     \bar "||"
   }
   \context Staff = down \fixed c {
-    <e, e>1\arpeggio | <e, e>\arpeggio |
-    <b,, b,>\arpeggio | <b,, b,>\arpeggio |
-    <fs,, fs,>2.\arpeggio <fs,, fs,>4 |
+    <e, e>1\arpeggio\f\> | <e, e>\arpeggio |
+    <b,, b,>\arpeggio\mf\> | <b,, b,>\arpeggio |
+    <fs,, fs,>2.\arpeggio\mp <fs,, fs,>4 |
     <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
     <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
     <fs,, fs,>1\arpeggio |
@@ -337,7 +338,7 @@ introRepeat = <<
     <d f bf d> |
     <<
       { <ds! fs! b ds!> }
-      \new Voice \fixed c { r4 <b,, b,> <b,, b,> <b,, b,> }
+      \new Voice \fixed c { r4 <b,, b,>\< <b,, b,> <b,, b,>\! }
     >> |
   }
 >>
@@ -347,7 +348,7 @@ preChorusTwo = <<
     \key e \major
     <<
       \relative c' {
-        r4 <b e>8 <b e> <b e>4 b |
+        r4\mf <b e>8 <b e> <b e>4 b |
         <b fs'>8 <b fs'> <b gs'>4 <b fs'>2 |
         r4 <b e>8 <b e> <b e>4 b |
         b' gs8 e4 fs8 gs4 |
@@ -383,16 +384,16 @@ chorusTwo = <<
       <<
         \relative c'' {
           \voiceOne
-          r1 | r2 r8 gs gs4 |
+          r1\f | r2 r8 gs gs4 |
           gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-          cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
-          cs8 e cs e cs e cs-> b~ | b2 r8 gs'8 gs4 |
+          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+          cs8_. e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 gs'8 gs4 |
 
           \repeat volta 2 {
             gs8 fs e fs e2 | r4 gs8 gs4 gs8 gs gs~ |
             gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-            cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
-            cs8 e cs e cs e cs-> b~ |
+            cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+            cs8_. e_. cs_. e_. cs_. e_. cs_. b~ |
           }
           \alternative {
             { b2 r8 gs'8 gs4 | }
@@ -458,13 +459,13 @@ chorusTwo = <<
 outro = <<
   \set PianoStaff.connectArpeggios = ##t
   \context Staff = up \fixed c' {
-    <gs gs'>4 <e e'> <b b'> <e e'> | <ds ds'> <e e'> <b, b> <ds ds'> |
+    <gs gs'>4\ff <e e'> <b b'> <e e'> | <ds ds'> <e e'> <b, b> <ds ds'> |
     <gs gs'>4 <e e'> <b b'> <e e'> | <ds ds'> <e e'> <b, b> <bf, bf> |
     <a, a>4 <cs cs'> <e e'> <cs cs'> | <ds ds'> <e e'> <fs fs'> <bf, bf> |
     <a, a>4 <cs cs'> <e e'> <cs cs'> | <gs gs'> <fs fs'> <e e'> <fs fs'> |
 
     \repeat unfold 2 {
-      gs4 e b e | ds e b, ds |
+      gs4\mf e b e | ds e b, ds |
       gs4 e b e | ds e b, bf, |
       a, cs e cs | ds e fs bf, |
       a, cs e cs |
@@ -477,10 +478,10 @@ outro = <<
 
     \ottava #1
     \fixed c'' {
-      gs4^"slower, rubato, like a lullaby for some reason" e b e | ds e b, ds |
+      gs4\mp^"slower, rubato, like a lullaby for some reason" e b e | ds e b, ds |
       gs4 e b e | ds e b, bf, |
       a, cs e cs | ds e fs bf, |
-      a, cs e cs | gs fs e fs |
+      a, cs e cs | gs_"rit." fs e fs |
       <gs, b, e>1\arpeggio\fermata |
     }
 
@@ -530,7 +531,7 @@ outro = <<
     \new Staff = up {
       \clef treble
       \time 4/4
-      \tempo 4 = 140 - 200
+      \tempo "Manically" 4 = 140 - 200
     }
     \new Staff = down {
       \clef bass
