@@ -3,6 +3,7 @@
 
 \header {
   title = "Heimdalsgate Like A Promethean Curse"
+  composer = "of Montreal / Kevin Barnes"
 }
 
 intro = <<
@@ -260,7 +261,7 @@ preIntroRepeat = <<
       >>
       \new Voice {
         \voiceTwo
-        <a, cs f>1\arpeggio | <a cs> |
+        <a, cs fs>1\arpeggio | <a cs> |
         a | <a cs>\arpeggio |
       }
     >>
@@ -377,12 +378,159 @@ preChorusTwo = <<
   }
 >>
 
+chorusTwo = <<
+  \context Staff = up <<
+      <<
+        \relative c'' {
+          \voiceOne
+          r1 | r2 r8 gs gs4 |
+          gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
+          cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
+          cs8 e cs e cs e cs-> b~ | b2 r8 gs'8 gs4 |
+
+          \repeat volta 2 {
+            gs8 fs e fs e2 | r4 gs8 gs4 gs8 gs gs~ |
+            gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
+            cs8 e cs e cs e cs-> b~ | b2 r8 e e4 |
+            cs8 e cs e cs e cs-> b~ |
+          }
+          \alternative {
+            { b2 r8 gs'8 gs4 | }
+            { b,1\repeatTie | }
+          }
+        }
+        \addlyrics {
+          Come on chem -- i -- ca -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- a -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- als
+          Come on chem -- i -- ca -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- a -- a -- als
+          Come on chem -- i -- ca -- a -- a -- a -- a -- als
+          Come on
+        }
+      >>
+      \new Voice \relative c' {
+        \voiceTwo
+        <e gs>4 e <e b'> e | <b ds> e b ds |
+        <e gs>4 e <e b'> e | <b ds> e b bf |
+        a2. s4 | ds8 b e b fs'4 bf, |
+        a2. s4 | gs'8 b, fs' b, e4 fs |
+
+        \repeat volta 2 {
+          <e gs>4 e <e b'> e | <b ds> e b ds |
+          <e gs>4 e <e b'> e | <b ds> e b bf |
+          a2. s4 | ds8 b e b fs'4 bf, |
+          a2. s4 |
+        }
+        \alternative {
+          { gs'8 b, fs' b, e4 fs | }
+          { gs8 b, fs' b, e4 fs | }
+        }
+      }
+  >>
+  \context Staff = down \fixed c {
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+
+    \repeat volta 2 {
+      <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+      <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+      <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+      <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+      <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+      <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+      <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    }
+    \alternative {
+      { <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> | }
+      { <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> | }
+    }
+  }
+>>
+
+outro = <<
+  \set PianoStaff.connectArpeggios = ##t
+  \context Staff = up \fixed c' {
+    <gs gs'>4 <e e'> <b b'> <e e'> | <ds ds'> <e e'> <b, b> <ds ds'> |
+    <gs gs'>4 <e e'> <b b'> <e e'> | <ds ds'> <e e'> <b, b> <bf, bf> |
+    <a, a>4 <cs cs'> <e e'> <cs cs'> | <ds ds'> <e e'> <fs fs'> <bf, bf> |
+    <a, a>4 <cs cs'> <e e'> <cs cs'> | <gs gs'> <fs fs'> <e e'> <fs fs'> |
+
+    \repeat unfold 2 {
+      gs4 e b e | ds e b, ds |
+      gs4 e b e | ds e b, bf, |
+      a, cs e cs | ds e fs bf, |
+      a, cs e cs |
+    }
+    \alternative {
+      { gs fs e fs | }
+      { gs_"rit." fs e fs\arpeggio\fermata | }
+    }
+    \bar "||"
+
+    \ottava #1
+    \fixed c'' {
+      gs4^"slower, rubato, like a lullaby for some reason" e b e | ds e b, ds |
+      gs4 e b e | ds e b, bf, |
+      a, cs e cs | ds e fs bf, |
+      a, cs e cs | gs fs e fs |
+      <gs, b, e>1\arpeggio\fermata |
+    }
+
+    \bar "|."
+  }
+  \context Staff = down \fixed c {
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+    <e, e>4 <e gs> <gs b>8 <e gs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <b, ds fs>4 <bf, d f> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <bf,, bf,> |
+    <a,, a,>4 <a, cs> <cs e>8 <a, cs>4 <b,, b,>8~ |
+    <b,, b,>8 <b, ds>4 <b, ds>8 <ds fs>4 <b, ds> |
+
+    <b, e gs>4 4 8 4 <b, ds fs>8~ |
+    <b, ds fs>8 4 8 4 4 |
+    <b, e gs>4 4 8 4 <b, ds fs>8~ |
+    <b, ds fs>8 4 8 4 <bf, d f>4 |
+    <a, cs e>4 4 8 4 <b, ds fs>8~ |
+    <b, ds fs>8 4 8 4 <bf, d f>4 |
+    <a, cs e>4 4 8 4 <b, ds fs>8~ |
+    <b, ds fs>8 4 8 4 4 |
+
+    <b, e gs>8-. r8 8-. r8 8-. 8-. r8 <b, ds fs>8-. |
+    r8 <b, ds fs>8-. r8 8-. 8-. r8 4-- |
+    <b, e gs>8-. r8 8-. r8 8-. 8-. r8 <b, ds fs>8-. |
+    r8 <b, ds fs>8-. r8 8-. 8-. r8 <bf, d f>4-- |
+    <a, cs e>8-. r8 8-. r8 8-. 8-. r8 <b, ds fs>8-. |
+    r8 <b, ds fs>8-. r8 8-. 8-. r8 <bf, d f>4-- |
+    <a, cs e>8-. r8 8-. r8 8-. 8-. r8 <b, ds fs>8-. |
+    r8 <b, ds fs>8-. r8 8-. 8-. r8 4\arpeggio\fermata |
+
+    \ottava #1
+    \fixed c' {
+      e4 b gs b | b fs ds b, |
+      e4 b gs b | a fs ds d |
+      cs a, cs e | b, fs ds d |
+      cs a, cs e | b, ds fs a |
+      <e, e>1\arpeggio\fermata |
+    }
+  }
+>>
+
 \score {
   \new PianoStaff {
     \new Staff = up {
       \clef treble
       \time 4/4
-      \tempo 4 = 140
+      \tempo 4 = 140 - 200
     }
     \new Staff = down {
       \clef bass
@@ -397,6 +545,8 @@ preChorusTwo = <<
     \preIntroRepeat
     \introRepeat
     \preChorusTwo
+    \chorusTwo
+    \outro
   }
   \layout { }
   \midi { }
