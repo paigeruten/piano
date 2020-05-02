@@ -176,8 +176,8 @@ chorus = <<
           \voiceOne
           r1\f | r2 r8 gs gs4 |
           gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
-          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b1 |
+          cs8 e cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+          cs8 e cs_. e_. cs_. e_. cs_. b~ | b1 |
         }
         \addlyrics {
           Come on chem -- i -- ca -- a -- als
@@ -256,7 +256,7 @@ preIntroRepeat = <<
           cs e | fs2\arpeggio r8 a a a |
         }
         \addlyrics {
-          ah ah ah ah ah ah ah
+          oh oh oh oh oh oh oh
           I'm in a
         }
       >>
@@ -386,14 +386,14 @@ chorusTwo = <<
           \voiceOne
           r1\f | r2 r8 gs gs4 |
           gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-          cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
-          cs8_. e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 gs'8 gs4 |
+          cs8 e cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+          cs8 e cs_. e_. cs_. e_. cs_. b~ | b2 r8 gs'8 gs4 |
 
           \repeat volta 2 {
             gs8 fs e fs e2 | r4 gs8 gs4 gs8 gs gs~ |
             gs8 fs e fs e2 | r4 gs8 gs4 e8 e cs~ |
-            cs8 e_. cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
-            cs8_. e_. cs_. e_. cs_. e_. cs_. b~ |
+            cs8 e cs_. e_. cs_. e_. cs_. b~ | b2 r8 e e4 |
+            cs8 e cs_. e_. cs_. e_. cs_. b~ |
           }
           \alternative {
             { b2 r8 gs'8 gs4 | }
