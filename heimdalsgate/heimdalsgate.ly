@@ -269,8 +269,8 @@ preIntroRepeat = <<
     \bar "||"
   }
   \context Staff = down \fixed c {
-    <e, e>1\arpeggio\f\> | <e, e>\arpeggio |
-    <b,, b,>\arpeggio\mf\> | <b,, b,>\arpeggio |
+    <e, e>1\arpeggio\f | <e, e>\arpeggio |
+    <b,, b,>\arpeggio\mf | <b,, b,>\arpeggio |
     <fs,, fs,>2.\arpeggio\mp <fs,, fs,>4 |
     <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
     <fs,, fs,> <fs,, fs,>2 <fs,, fs,>4 |
@@ -531,7 +531,7 @@ outro = <<
     \new Staff = up {
       \clef treble
       \time 4/4
-      \tempo "Manically" 4 = 140 - 200
+      \tempo 4 = 140 - 200
     }
     \new Staff = down {
       \clef bass
@@ -552,3 +552,4 @@ outro = <<
   \layout { }
   \midi { }
 }
+
